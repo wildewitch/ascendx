@@ -89,7 +89,38 @@ nav a {
 
 a:hover {
     text-decoration: underline;
- }
+}
+
+/* li {
+    display: block;
+    transition-duration: 0.5s;
+   }
+   
+   li:hover {
+     cursor: pointer;
+   }
+   
+   ul li ul {
+     visibility: hidden;
+     opacity: 0;
+     position: absolute;
+     transition: all 0.5s ease;
+     margin-top: 1rem;
+     left: 0;
+     display: none;
+   }
+   
+   ul li:hover > ul,
+   ul li ul:hover {
+     visibility: visible;
+     opacity: 1;
+     display: block;
+   }
+   
+   ul li ul li {
+     clear: both;
+     width: 100%;
+   } */
 
 /* /////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
@@ -178,7 +209,6 @@ ABOUT PAGE CONTENT
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     /* animation-name: slide;
     animation-iteration-count: infinite;
     animation-duration: 5s; */
@@ -217,10 +247,15 @@ ABOUT PAGE CONTENT
     color: #b9b9b9;
 }
 
+.about-content h1 {
+    text-align: center;
+}
+
 .about-content {
+    display: flex;
+    flex-direction: column;
     height: 40em;
     width: 35em;
-    text-align: center;
     background-color: #464646;
     border-radius: 10%;
     padding: 3em;
@@ -256,3 +291,157 @@ GLOBAL ANCHOR BODY
     background-attachment: fixed;
 }
  */
+
+/* /////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+PRODUCTS AND TECHNOLOGY PAGE
+*/
+
+.pt-h1 {
+    padding: 1.1em 0 .2em .25em;
+    text-align: center;
+}
+
+.pt-container-1, .pt-container-2, .pt-container-3 {
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+    margin: 1em;
+}
+
+.node {
+    height: 50%;
+    width: 50%;
+    background-color: white;
+}
+
+ /* /////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+PRODUCT
+*/
+
+.product-title {
+    padding: 1.1em 0 .2em .25em;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 81.5vh;
+    width: 100%;
+}
+
+.photobox {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 18s;
+    animation-timing-function: cubic-bezier(0.0, 0.0, 0.0, 5.0)
+    /* animation-play-state */
+}
+@-webkit-keyframes fade {
+    0% {
+        background-image: url("img/epa-main.png");
+    }
+    33% {
+        background-image: url("img/epa-autowork.png");
+    }
+    66% {
+        background-image: url("img/epa-overview.png");
+    }
+    100% {
+        background-image: url("img/epa-main.png");
+    }
+}
+
+@keyframes fade {
+    0% {
+        background-image: url("img/epa-main.png");
+    }
+    33% {
+        background-image: url("img/epa-autowork.png");
+    }
+    66% {
+        background-image: url("img/epa-overview.png");
+    }
+    100% {
+        background-image: url("img/epa-main.png");
+    }
+}
+
+/* .main-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+
+.biobox {
+    padding: 1em;
+    background-color: #464646;
+    text-align: center;
+}
+
+.biobox h1 {
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: .1em;
+}
+
+.biobox p, .subtitle {
+    color: #b9b9b9;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.subtitle {
+    color: white;
+}
+
+.features-h2 {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: .2em;
+    text-align: left;
+}
+
+.features {
+    padding: 1em;
+    text-align: left;
+}
+
+.features li {
+    font-size: 1.2em;
+    color: #b9b9b9;
+    padding: .3em;
+}
+
+.preorder {
+    background-color:rgb(136, 24, 24);
+    color: white;
+    padding: 1em 6em;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    transition-duration: .25s;
+}
+
+.preorder:hover {
+    background-color: white;
+    color:rgb(136, 24, 24);
+    text-decoration: none;
+}
+
