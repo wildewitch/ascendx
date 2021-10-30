@@ -49,10 +49,11 @@ HEADER
 */
 
 .main-header {
-    background-color: rgb(49, 48, 48);
+    background-color: black;
     width: 100%;
     height: 4em;
     position: fixed;
+    z-index: 0;
 }
 
 .logo-nav {
@@ -63,8 +64,8 @@ HEADER
 
 .logo {
     height: auto;
-    width: 25em;
-    padding: .25em;
+    width: 7em;
+    padding: .5em;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////
@@ -78,10 +79,11 @@ nav {
     right: 1em;
     display: flex;
     max-width: 100em;
+    transition-duration: .25s;
 }
 
 nav a {
-    padding: 0 4em;
+    padding: 0em 4em;
     text-decoration: none;
     letter-spacing: .1em;
     color: white;
@@ -298,150 +300,184 @@ PRODUCTS AND TECHNOLOGY PAGE
 */
 
 .pt-h1 {
-    padding: 1.1em 0 .2em .25em;
+    font-size: 4em;
+    padding-top: 1.2em;
+    padding-bottom: .3em;
     text-align: center;
 }
 
-.pt-container-1, .pt-container-2, .pt-container-3 {
+.product-container-main {
+    padding-top: 4em;
     display: grid;
-    grid-template-columns: 34% 33% 33%;
-    margin: 1em;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+.pt-container-1 {
+    height: 93.5vh;
+}
+
+.pt-container-2, .pt-container-3 {
+    width: 50vw;
+}
+
+.nested {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .node {
-    height: 50%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     background-color: white;
-}
-
- /* /////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-PRODUCT
-*/
-
-.product-title {
-    padding: 1.1em 0 .2em .25em;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.product-container {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    height: 81.5vh;
-    width: 100%;
-}
-
-.photobox {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-animation-name: fade;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 12s;
-    animation-name: fade;
-    animation-iteration-count: infinite;
-    animation-duration: 18s;
-    animation-timing-function: cubic-bezier(0.0, 0.0, 0.0, 5.0)
-    /* animation-play-state */
-}
-@-webkit-keyframes fade {
-    0% {
-        background-image: url("img/epa-main.png");
-    }
-    33% {
-        background-image: url("img/epa-autowork.png");
-    }
-    66% {
-        background-image: url("img/epa-overview.png");
-    }
-    100% {
-        background-image: url("img/epa-main.png");
-    }
-}
-
-@keyframes fade {
-    0% {
-        background-image: url("img/epa-main.png");
-    }
-    33% {
-        background-image: url("img/epa-autowork.png");
-    }
-    66% {
-        background-image: url("img/epa-overview.png");
-    }
-    100% {
-        background-image: url("img/epa-main.png");
-    }
-}
-
-/* .main-pic {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-} */
-
-.biobox {
-    padding: 1em;
-    background-color: #464646;
-    text-align: center;
-}
-
-.biobox h1 {
-    font-size: 3.5em;
-    text-align: center;
-}
-
-.subtitle {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: .1em;
-}
-
-.biobox p, .subtitle {
-    color: #b9b9b9;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.subtitle {
-    color: white;
-}
-
-.features-h2 {
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: .2em;
-    text-align: left;
-}
-
-.features {
-    padding: 1em;
-    text-align: left;
-}
-
-.features li {
-    font-size: 1.2em;
-    color: #b9b9b9;
-    padding: .3em;
-}
-
-.preorder {
-    background-color:rgb(136, 24, 24);
-    color: white;
-    padding: 1em 6em;
+    position: relative;
+    transition-duration: .5s;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition-duration: .25s;
     text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2em;
+}
+
+.node:hover {
+    background-size: 101%;
+    filter: brightness(50%);
+    text-decoration: none;
+}
+
+#node1 {
+    top: 45%;
+    left: 11%;
+}
+
+#node2 {
+    top: 25%;
+    left: 60%;
+}
+
+#node3 {
+    top: 72%;
+    left: 60%;
+}
+
+#node-epaframe {background-image: url("img/epa-tn.png");}
+#node-autochef {background-image: url("img/autochef-tn.png");}
+#node-courier {background-image: url("img/courier.png");}
+
+/* NEW PRODUCT PAGE */
+
+.p-backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+    position: relative;
+    z-index: -1;
+}
+
+#autochef-bd {
+    filter: brightness(50%);
+}
+
+#courier-bd {background-image: url("img/courier-bg.png");}
+#epa-bd {background-image: url("img/epa-bg.png");}
+#autochef-bd {background-image: url("img/chef-bg.png");}
+
+.p-title-container {
+    position: absolute;
+    top: 7em;
+    left: 4.5em;
+}
+
+.p-title-h1 {
+    letter-spacing: .05em;
+    font-family: "Montserrat", sans-serif;
+}
+
+.p-subtitle {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    letter-spacing: .05em;
+}
+
+.p-bio {
+    color: rgb(192, 192, 192);
+    max-width: 40%;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 5em;
+    left: 4.5em;
+}
+
+.p-preorder {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    letter-spacing: .2em;
+    padding: 3em 4em;
     transition-duration: .25s;
 }
 
-.preorder:hover {
+#dark-bg {
+    background-color: rgb(20, 20, 20);
+}
+
+.goback {
+    bottom: 3em;
+    left: 4.5em;
+    background-color: black;
+    color: white;
+    padding: 3em 2em;
+    margin-right: 1em;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.p-preorder:hover {
     background-color: white;
-    color:rgb(136, 24, 24);
+    color: black;
     text-decoration: none;
 }
 
+.goback:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.p-ul {
+    font-size: 1em;
+    max-width: 20%;
+    margin-left: 1em;
+    color: rgb(192, 192, 192);
+}
+
+.footer {
+    position: absolute;
+    bottom: 2.5em;
+    right: 2em;
+}
+
+#with-disclaimer {
+    width: 67%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dark-bg:hover {
+    background-color: white;
+    color: black;
+}
+
+.p-footer {
+    font-size: .8em;
+    color: white;
+}
+
+.p-disclaimer {
+    color: rgb(192, 192, 192);
+    font-size: .5em;
+}
