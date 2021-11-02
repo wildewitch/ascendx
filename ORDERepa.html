@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Preorder | AscendX Future Corp</title>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,400;0,700;1,400&family=Montserrat&family=Orbitron:wght@500&display=swap");
+		</style>
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="header-container"></div>
+			<nav class="logo-nav">
+				<a href="index.html"
+					><img
+						class="logo"
+						alt="The AscendX Company Logo"
+						src="img/ascendx-logo.png"
+				/></a>
+			</nav>
+			<nav>
+				<a href="about.html">ABOUT US</a>
+				<a href="products.html">OUR PRODUCTS</a>
+				<a href="contact.html">CONTACT US</a>
+			</nav>
+		</header>
+		<div class="preorder-container">
+			<div class="banner-text">
+				<h1>PREORDER</h1>
+				<p>Products || EPA Exo-Frame</p>
+			</div>
+			<div class="preorder-banner" id="epa-banner"></div>
+				<div class="webform">
+					<h3>Please enter your information in the fields below.</h3>
+					<p id="p-sub">
+						Upon submission, you will be placed on an email waiting list for the
+						next supply drop.¹
+					</p>
+					<br /><br><br>
+					<form id="preorder-form" action="http://localhost:3001" method="post">
+						<input type="hidden" id="productid" name="productid" value="1"/>
+						<input type="hidden" id="preorderdate" name="preorderdate" value="11-1-2021"/>
+						<label for="firstname">First name*</label><br />
+						<input type="text" id="firstname" name="firstname"/>
+						<br />
+						<br />
+						<label for="lastname">Last name*</label><br />
+						<input type="text" id="lastname" name="lastname" />
+						<br />
+						<br />
+						<label for="email">Email address*</label><br />
+						<input type="text" id="email" name="email" />
+						<br />
+						<br />
+						<input form="preorder-form" id="submit-btn" type="submit" value="JOIN WAITING LIST"/>
+					</form>
+					<p>*Required.<br>
+					¹Products are sold at a "first come, first serve" basis. Signing up for the waiting list does not guarantee an opportunity to purchase.</p>
+
+					<p>By joining the waiting list, you consent to the free distribution of your email address by AscendX Future Corp to its subsidiaries and partners.</p>
+				</div>
+
+			</div>
+		</div>
+		<!-- <script type="text/javascript">
+			document.getElementById("submit-btn").onclick = function () {
+				location.href = "/about.html";
+			};
+		</script> -->
+		<!-- <script src="./form.js"></script> -->
+	</body>
+</html>
