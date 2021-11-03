@@ -1,9 +1,3 @@
-
-// const getAllProducts = async () => {
-// 	const res = await axios.get(`http://localhost:3001`);
-// 	console.log(res.data);
-// };
-
 const getFirstName = document.querySelector("#firstname");
 const getLastName = document.querySelector("#lastname");
 const getEmail = document.querySelector("#email");
@@ -15,11 +9,10 @@ const timestamp = document.querySelector("#preorderdate")
 const handleSubmit = async (obj) => {
 	try {
 		await axios.post("http://localhost:3001/preorder", obj)
-		window.alert("Your submissiion")
+		window.alert("Your submission has been recieved and an email has been sent. AscendX thanks you for your interest.")
 	} catch (error) {
 		window.alert("Something went wrong. Please try again.")
 	}
-
 };
 
 signUp.addEventListener('submit', (e) => {
