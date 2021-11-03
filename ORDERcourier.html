@@ -9,6 +9,7 @@
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,400;0,700;1,400&family=Montserrat&family=Orbitron:wght@500&display=swap");
 		</style>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 	<body>
 		<header class="main-header">
@@ -40,11 +41,11 @@
 						next supply drop.¹
 					</p>
 					<br /><br><br>
-					<form id="preorder-form" action="http://localhost:3001/form" method="post">
+					<form id="preorder-form" method="post">
 						<input type="hidden" id="productid" name="productid" value="3"/>
 						<input type="hidden" id="preorderdate" name="preorderdate" value="11-1-2021"/>
 						<label for="firstname">First name*</label><br />
-						<input type="text" id="firstname" name="firstname" onchange="firstNameValue()"/>
+						<input type="text" id="firstname" name="firstname"/>
 						<br />
 						<br />
 						<label for="lastname">Last name*</label><br />
@@ -55,14 +56,15 @@
 						<input type="text" id="email" name="email" />
 						<br />
 						<br />
+						<input class="submit-btn" type="submit" value="JOIN WAITING LIST"/>
 					</form>
 					<p>*Required.<br>
 					¹Products are sold at a "first come, first serve" basis. Signing up for the waiting list does not guarantee an opportunity to purchase.</p>
-                    <input class="submit-btn" type="submit" value="JOIN WAITING LIST"/>
 					<p>By joining the waiting list, you consent to the free distribution of your email address by AscendX Future Corp to its subsidiaries and partners.</p>
 				</div>
 
 			</div>
 		</div>
+		<script src="./form.js" type="module"></script>
 	</body>
 </html>

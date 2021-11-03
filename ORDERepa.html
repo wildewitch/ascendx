@@ -9,6 +9,7 @@
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,400;0,700;1,400&family=Montserrat&family=Orbitron:wght@500&display=swap");
 		</style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	</head>
 	<body>
 		<header class="main-header">
@@ -40,7 +41,7 @@
 						next supply drop.¹
 					</p>
 					<br /><br><br>
-					<form id="preorder-form" action="http://localhost:3001" method="post">
+					<form id="preorder-form" method="post">
 						<input type="hidden" id="productid" name="productid" value="1"/>
 						<input type="hidden" id="preorderdate" name="preorderdate" value="11-1-2021"/>
 						<label for="firstname">First name*</label><br />
@@ -70,6 +71,6 @@
 				location.href = "/about.html";
 			};
 		</script> -->
-		<!-- <script src="./form.js"></script> -->
+		<script src="./form.js" type="module"></script>
 	</body>
 </html>
